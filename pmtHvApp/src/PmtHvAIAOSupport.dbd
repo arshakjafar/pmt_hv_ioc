@@ -1,0 +1,4 @@
+device(ai,INST_IO,devPmtHvAI,"PmtHvAI")
+device(ao,INST_IO,devPmtHvAO,"PmtHvAO")
+device(ai,INST_IO,devPmtAI,"PmtAI")
+device(ao,INST_IO,devPmtAO,"PmtAO")

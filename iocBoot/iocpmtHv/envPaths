@@ -1,0 +1,3 @@
+epicsEnvSet("IOC","iocpmtHv")
+epicsEnvSet("TOP","/home/admin1/Test/pmt-hv-ioc")
+epicsEnvSet("EPICS_BASE","/home/admin1/EPICS/epics-base")

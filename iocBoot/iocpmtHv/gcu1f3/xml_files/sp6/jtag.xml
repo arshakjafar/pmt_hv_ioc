@@ -1,0 +1,5 @@
+<node  description="jtag" fwinfo="endpoint;width=3">
+	<node id="ctrl" address="0x0" />
+	<node id="tditms" mode="port" address="0x3" />
+	<node id="tdo" mode="port" address="0x4" />
+</node>

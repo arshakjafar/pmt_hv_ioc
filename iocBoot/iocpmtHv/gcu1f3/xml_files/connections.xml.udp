@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+	<!--<connection id="GCU1F3_0032" uri="ipbusudp-2.0://10.7.0.12:50001" address_table="file://gcu1f3.xml" />-->
+	<!--<connection id="GCU1F3_0032" uri="chtcp-2.0://localhost:10203?target=10.7.0.12:50001" address_table="file://gcu1f3.xml" /> -->
+	<!--<connection id="GCU1F3_0018" uri="chtcp-2.0://localhost:10203?target=10.7.0.18:50001" address_table="file://gcu1f3.xml" /> -->
+	<connection id="GCU1E_7139" uri="ipbusudp-2.0://10.7.27.227:50001" address_table="file://gcu1f3.xml" />
+	<connection id="GCU2E_5934" uri="ipbusudp-2.0://10.7.23.46:50001" address_table="file://gcu1f3.xml" />
+	<connection id="GCU2E_2761" uri="ipbusudp-2.0://10.7.10.201:50001" address_table="file://gcu1f3.xml" />
+</connections>

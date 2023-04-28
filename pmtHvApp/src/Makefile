@@ -1,0 +1,77 @@
+TOP=../..
+
+include $(TOP)/configure/CONFIG
+#----------------------------------------
+#  ADD MACRO DEFINITIONS AFTER THIS LINE
+#=============================
+
+#---------------- For IPBUS -----------
+USR_INCLUDES += -I/opt/cactus/include
+USR_CXXFLAGS += -std=c++11
+USR_CPPFLAGS += -DUSE_TYPED_RSET -DUSE_TYPED_DSET
+USR_LDFLAGS += -L/opt/cactus/lib
+USR_LDFLAGS += -lpthread
+USR_LDFLAGS += -lboost_filesystem \
+                -lboost_regex \
+                -lboost_system \
+                -lboost_thread \
+                -lpugixml 
+
+cactus_uhal_log_DIR = /opt/cactus/lib
+cactus_uhal_grammars_DIR = /opt/cactus/lib
+cactus_uhal_uhal_DIR = /opt/cactus/lib
+pmtHv_LIBS += cactus_uhal_log
+pmtHv_LIBS += cactus_uhal_grammars
+pmtHv_LIBS += cactus_uhal_uhal
+
+#--------------------------------------
+
+#=============================
+# Build the IOC application
+
+PROD_IOC = pmtHv
+# pmtHv.dbd will be created and installed
+DBD += pmtHv.dbd
+
+# pmtHv.dbd will be made up from these files:
+pmtHv_DBD += base.dbd
+pmtHv_DBD += menuScan.dbd
+
+# Include dbd files from all support applications:
+pmtHv_DBD += PmtHvAIAOSupport.dbd
+pmtHv_DBD += pmtHvRegister.dbd
+
+# Add all the support libraries needed by this IOC
+#pmtHv_LIBS += xxx
+
+# pmtHv_registerRecordDeviceDriver.cpp derives from pmtHv.dbd
+pmtHv_SRCS += pmtHv_registerRecordDeviceDriver.cpp
+pmtHv_SRCS += devPmtHvAI.cpp
+pmtHv_SRCS += devPmtHvAO.cpp
+pmtHv_SRCS += devPmtAI.cpp
+pmtHv_SRCS += devPmtAO.cpp  #added 2023.03.02
+pmtHv_SRCS += pmtHvRecordDriver.cpp
+pmtHv_SRCS += pmtRecordDriver.cpp
+pmtHv_SRCS += pmtHvDevDriver.cpp
+pmtHv_SRCS += pmtGcuDevDriver.cpp
+pmtHv_SRCS += pmtHvDevManager.cpp
+pmtHv_SRCS += pmtGcuDevManager.cpp
+pmtHv_SRCS += hvErrTimeStat.cpp
+pmtHv_SRCS += utility.cpp
+
+# Build the main IOC entry point on workstation OSs.
+pmtHv_SRCS_DEFAULT += pmtHvMain.cpp
+pmtHv_SRCS_vxWorks += -nil-
+
+# Add support from base/src/vxWorks if needed
+#pmtHv_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
+
+# Finally link to the EPICS Base libraries
+pmtHv_LIBS += $(EPICS_BASE_IOC_LIBS)
+
+#===========================
+
+include $(TOP)/configure/RULES
+#----------------------------------------
+#  ADD RULES AFTER THIS LINE
+

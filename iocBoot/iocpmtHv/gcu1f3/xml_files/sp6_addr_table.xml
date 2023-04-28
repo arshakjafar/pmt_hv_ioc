@@ -1,0 +1,5 @@
+<node id="top" description="registers map">
+  <node id="reg"     module="file://sp6/reg.xml" address="0x0" fwinfo="endpoint;width=5"/>
+  <node id="i2c"     module="file://sp6/opencores_i2c.xml" address="0x20" fwinfo="endpoint;width=5"/>
+  <node id="jtag"     module="file://sp6/jtag.xml" address="0x30" fwinfo="endpoint;width=5"/>
+</node>

@@ -1,0 +1,121 @@
+<node id="GCU">
+  <node id="uart_0" address="0x5000" description="ipbus to uart bridge" fwinfo="endpoint;width=4">
+    <node id="setup" address="0x0">
+      <node id="clks" mask="0x00ffffff" description="system clock divided by baudrate" />
+      <node id="parity" mask="0x07000000" description="parity bits setting" />
+      <node id="stop" mask="0x08000000" description="number of stop bits" />
+      <node id="word" mask="0x30000000" description="number of word bits" />
+    </node>
+    <node id="fifo" address="0x1">
+      <node id="tx_fifo_lgln" mask="0xf0000000" description="tx fifo length" />
+      <node id="tx_fifo_fill" mask="0x0ffc0000" description="tx fifo fill level" />
+      <node id="tx_fifo_half" mask="0x00020000" description="tx fifo half full" />
+      <node id="tx_fifo_not_empty" mask="0x00010000" description="tx fifo not empty" />
+      <node id="rx_fifo_lgln" mask="0x0000f000" description="rx fifo length" />
+      <node id="rx_fifo_fill" mask="0x00000ffc" description="rx fifo fill level" />
+      <node id="rx_fifo_half" mask="0x00000002" description="rx fifo half full" />
+      <node id="rx_fifo_not_empty" mask="0x00000001" description="rx fifo not empty" />
+    </node>
+    <node id="rx_data" address="0x2">
+      <node id="clear" mask="0x00000600" description="errors clear bits" />
+      <node id="rx_reset" mask="0x00001000" description="receiver reset" />
+    </node>
+    <node id="tx_data" address="0x3"/>
+  </node>
+  <node id="uart_1" address="0x5100" description="ipbus to uart bridge" fwinfo="endpoint;width=4">
+    <node id="setup" address="0x0">
+      <node id="clks" mask="0x00ffffff" description="system clock divided by baudrate" />
+      <node id="parity" mask="0x07000000" description="parity bits setting" />
+      <node id="stop" mask="0x08000000" description="number of stop bits" />
+      <node id="word" mask="0x30000000" description="number of word bits" />
+    </node>
+    <node id="fifo" address="0x1">
+      <node id="tx_fifo_lgln" mask="0xf0000000" description="tx fifo length" />
+      <node id="tx_fifo_fill" mask="0x0ffc0000" description="tx fifo fill level" />
+      <node id="tx_fifo_half" mask="0x00020000" description="tx fifo half full" />
+      <node id="tx_fifo_not_empty" mask="0x00010000" description="tx fifo not empty" />
+      <node id="rx_fifo_lgln" mask="0x0000f000" description="rx fifo length" />
+      <node id="rx_fifo_fill" mask="0x00000ffc" description="rx fifo fill level" />
+      <node id="rx_fifo_half" mask="0x00000002" description="rx fifo half full" />
+      <node id="rx_fifo_not_empty" mask="0x00000001" description="rx fifo not empty" />
+    </node>
+    <node id="rx_data" address="0x2">
+      <node id="clear" mask="0x00000600" description="errors clear bits" />
+      <node id="rx_reset" mask="0x00001000" description="receiver reset" />
+    </node>
+    <node id="tx_data" address="0x3"/>
+  </node>
+  <node id="uart_2" address="0x5200" description="ipbus to uart bridge" fwinfo="endpoint;width=4">
+    <node id="setup" address="0x0">
+      <node id="clks" mask="0x00ffffff" description="system clock divided by baudrate" />
+      <node id="parity" mask="0x07000000" description="parity bits setting" />
+      <node id="stop" mask="0x08000000" description="number of stop bits" />
+      <node id="word" mask="0x30000000" description="number of word bits" />
+    </node>
+    <node id="fifo" address="0x1">
+      <node id="tx_fifo_lgln" mask="0xf0000000" description="tx fifo length" />
+      <node id="tx_fifo_fill" mask="0x0ffc0000" description="tx fifo fill level" />
+      <node id="tx_fifo_half" mask="0x00020000" description="tx fifo half full" />
+      <node id="tx_fifo_not_empty" mask="0x00010000" description="tx fifo not empty" />
+      <node id="rx_fifo_lgln" mask="0x0000f000" description="rx fifo length" />
+      <node id="rx_fifo_fill" mask="0x00000ffc" description="rx fifo fill level" />
+      <node id="rx_fifo_half" mask="0x00000002" description="rx fifo half full" />
+      <node id="rx_fifo_not_empty" mask="0x00000001" description="rx fifo not empty" />
+    </node>
+    <node id="rx_data" address="0x2">
+      <node id="clear" mask="0x00000600" description="errors clear bits" />
+      <node id="rx_reset" mask="0x00001000" description="receiver reset" />
+    </node>
+    <node id="tx_data" address="0x3"/>
+  </node>
+
+<node id="sysmon" address="0x8000" fwinfo="endpoint; width=8">
+
+  <!-- NOTE: Since the lower nine bits of the address are passed
+       straigh to the DRP side of the sysmon, one should not
+       instantiate the IPBus sysmon entity below address 0x200. -->
+
+  <!-- More details about the actual register contents can be found in
+       Xilinx UG480. -->
+
+  <node id="temp"
+        description="FPGA die temperature. Conversion: (ADC_code x 503.975 / 4096.) - 273.15 [C]."
+        address="0x00000000"
+        mask="0x0000fff0"
+        tags="conversion=(val * 503.975 / 4096.) - 273.15;C" />
+
+  <node id="vccint"
+        description="VCCINT. Conversion: (ADC_code / 4096.) * 3 [V]."
+        address="0x00000001"
+        mask="0x0000fff0"
+        tags="conversion=(val / 4096.) * 3.;V" />
+
+  <node id="vccaux"
+        description="VCCAUX. Conversion: (ADC_code / 4096.) * 3 [V]."
+        address="0x00000002"
+        mask="0x0000fff0"
+        tags="conversion=(val / 4096.) * 3.;V" />
+
+  <!-- NOTE: At address 0x3 lives the VP/VN measurement, which is
+       disabled on the VHDL side. -->
+
+  <node id="vrefp"
+        description="VREFP. Conversion: (ADC_code / 4096.) * 3 [V]."
+        address="0x00000004"
+        mask="0x0000fff0"
+        tags="conversion=(val / 4096.) * 3.;V" />
+
+  <node id="vrefn"
+        description="VREFN. Conversion: (ADC_code / 4096.) * 3 [V]."
+        address="0x00000005"
+        mask="0x0000fff0"
+        tags="conversion=(val / 4096.) * 3.;V" />
+
+  <node id="vccbram"
+        description="VCCBRAM. Conversion: (ADC_code / 4096.) * 3 [V]."
+        address="0x00000006"
+        mask="0x0000fff0"
+        tags="conversion=(val / 4096.) * 3.;V" />
+
+</node>
+</node>

@@ -1,0 +1,299 @@
+<node id="TOP">
+   <node id="ctrl_reg" address="0x0" description="ctrl/stat register" tags="slave0">
+     <!-- <node id="rst" address="0x0"/>-->
+     <!-- <node id="id" address="0x1"/>-->
+   </node>
+   <node id="cs_write" address="0x40" description="configuration space write registers" tags="slave1">
+      <node id="ctrl" address="0x0">  
+         <node id="coarse_delay" mask="0x0000001f" description="synch links coarse delay" />
+         <node id="sw_rst" mask="0x00000020" description="software reset" />
+         <node id="1588ptp_enable" mask="0x00000040" description="1588 ptp enable"/>
+         <node id="polarity" mask="0x00000080" description="pulse output polarity"/>
+         <node id="chb_req1" mask="0x00000100" description="chb request 1"/>
+         <node id="tap_calibration_enable" mask="0x00000200" description="tap calibration enable"/>
+         <node id="gcu_select" mask="0x0000fc00" description="GCU select - from 1 to 48" />
+         <node id="brd_idle" mask="0x00010000" description="broadcast idle"/>
+         <node id="brd_rst_time" mask="0x00020000" description="broadcast rst time"/>
+         <node id="brd_rst_event" mask="0x00040000" description="broadcast rst event"/>
+         <node id="brd_rst_time_event" mask="0x00080000" description="broadcast rst time event"/>
+         <node id="brd_supernova" mask="0x00100000" description="broadcast supernova"/>
+         <node id="brd_test_pulse" mask="0x00200000" description="broadcast test pulse"/>
+         <node id="brd_time_request" mask="0x00400000" description="broadcast time request"/>
+         <node id="brd_rst_errors" mask="0x00800000" description="broadcast rst errors"/>
+         <node id="brd_autotrigger" mask="0x01000000" description="broadcast autotrigger"/>
+         <node id="brd_en_acquisition" mask="0x02000000" description="broadcast enable acquisition"/>
+         <node id="tap_rst" mask="0x04000000" description="tap reset"/>
+         <node id="tap_incr" mask="0x08000000" description="tap increment"/>
+         <node id="l1a_tap_calibration_enable" mask="0x10000000" description="l1a tap calibration enable"/>
+         <node id="l1a_go_prbs" mask="0x20000000" description="l1a go prbs"/>
+         <node id="hit_toggle" mask="0x40000000" description="hit_toggle"/>
+         <node id="enable_trigger" mask="0x80000000" description="enable_trigger"/>
+      </node> 
+      <node id="1588ptp_period" address="0x1"/>
+      <node id="gcu_actually_connected_1" address="0x2" />
+      <node id="gcu_actually_connected_2" address="0x3" />
+      <node id="ctrl2" address="0x4">
+        <node id="molteplicity" mask="0x000000FF" description="set trigger molteplicity" />
+        <node id="ext_trg_mode" mask="0x00000100" description="set external trigger mode" />
+      </node>
+      <node id="pulse_time2" address="0x3"/>
+      <node id="pulse_width" address="0x4"/>
+      <node id="pulse_delay" address="0x5"/>
+      <node id="coarse_delay_ttcrx1" address="0x6"/>
+      <node id="coarse_delay_ttcrx2" address="0x7"/>
+      <node id="coarse_delay_ttcrx3" address="0x8"/>
+      <node id="coarse_delay_ttcrx4" address="0x9"/>
+      <node id="coarse_delay_ttcrx5" address="0xa"/>
+      <node id="coarse_delay_ttcrx6" address="0xb"/>
+      <node id="coarse_delay_ttcrx7" address="0xc"/>
+      <node id="coarse_delay_ttcrx8" address="0xd"/>
+      <node id="coarse_delay_ttcrx9" address="0xe"/>
+      <node id="coarse_delay_ttcrx10" address="0xf"/>
+      <node id="coarse_delay_ttcrx11" address="0x10"/>
+      <node id="coarse_delay_ttcrx12" address="0x11"/>
+      <node id="coarse_delay_ttcrx13" address="0x12"/>
+      <node id="coarse_delay_ttcrx14" address="0x13"/>
+      <node id="coarse_delay_ttcrx15" address="0x14"/>
+      <node id="coarse_delay_ttcrx16" address="0x15"/>
+      <node id="coarse_delay_ttcrx17" address="0x16"/>
+      <node id="coarse_delay_ttcrx18" address="0x17"/>
+      <node id="coarse_delay_ttcrx19" address="0x18"/>
+      <node id="coarse_delay_ttcrx20" address="0x19"/>
+      <node id="coarse_delay_ttcrx21" address="0x1a"/>
+      <node id="coarse_delay_ttcrx22" address="0x1b"/>
+      <node id="coarse_delay_ttcrx23" address="0x1c"/>
+      <node id="coarse_delay_ttcrx24" address="0x1d"/>
+      <node id="coarse_delay_ttcrx25" address="0x1e"/>
+      <node id="coarse_delay_ttcrx26" address="0x1f"/>
+      <node id="coarse_delay_ttcrx27" address="0x20"/>
+      <node id="coarse_delay_ttcrx28" address="0x21"/>
+      <node id="coarse_delay_ttcrx29" address="0x22"/>
+      <node id="coarse_delay_ttcrx30" address="0x23"/>
+      <node id="coarse_delay_ttcrx31" address="0x24"/>
+      <node id="coarse_delay_ttcrx32" address="0x25"/>
+      <node id="coarse_delay_ttcrx33" address="0x26"/>
+      <node id="coarse_delay_ttcrx34" address="0x27"/>
+      <node id="coarse_delay_ttcrx35" address="0x28"/>
+      <node id="coarse_delay_ttcrx36" address="0x29"/>
+      <node id="coarse_delay_ttcrx37" address="0x2a"/>
+      <node id="coarse_delay_ttcrx38" address="0x2b"/>
+      <node id="coarse_delay_ttcrx39" address="0x2c"/>
+      <node id="coarse_delay_ttcrx40" address="0x2d"/>
+      <node id="coarse_delay_ttcrx41" address="0x2e"/>
+      <node id="coarse_delay_ttcrx42" address="0x2f"/>
+      <node id="coarse_delay_ttcrx43" address="0x30"/>
+      <node id="coarse_delay_ttcrx44" address="0x31"/>
+      <node id="coarse_delay_ttcrx45" address="0x32"/>
+      <node id="coarse_delay_ttcrx46" address="0x33"/>
+      <node id="coarse_delay_ttcrx47" address="0x34"/>
+      <node id="coarse_delay_ttcrx48" address="0x35"/>
+   </node>
+   <node id="cs_read" address="0x100" description="configuration space read registers" tags="slave2">
+      <node id="globaltime1" address="0x0"/>
+      <node id="globaltime2" address="0x1"/>
+      <node id="ttcrx1_1_bit_error_counter" address="0x2"/>
+      <node id="ttcrx2_1_bit_error_counter" address="0x3"/>
+      <node id="ttcrx3_1_bit_error_counter" address="0x4"/>
+      <node id="ttcrx4_1_bit_error_counter" address="0x5"/>
+      <node id="ttcrx5_1_bit_error_counter" address="0x6"/>
+      <node id="ttcrx6_1_bit_error_counter" address="0x7"/>
+      <node id="ttcrx7_1_bit_error_counter" address="0x8"/>
+      <node id="ttcrx8_1_bit_error_counter" address="0x9"/> 
+      <node id="ttcrx9_1_bit_error_counter" address="0xa"/>
+      <node id="ttcrx10_1_bit_error_counter" address="0xb"/>
+      <node id="ttcrx11_1_bit_error_counter" address="0xc"/>
+      <node id="ttcrx12_1_bit_error_counter" address="0xd"/>
+      <node id="ttcrx13_1_bit_error_counter" address="0xe"/>
+      <node id="ttcrx14_1_bit_error_counter" address="0xf"/>
+      <node id="ttcrx15_1_bit_error_counter" address="0x10"/>
+      <node id="ttcrx16_1_bit_error_counter" address="0x11"/>
+      <node id="ttcrx17_1_bit_error_counter" address="0x12"/>
+      <node id="ttcrx18_1_bit_error_counter" address="0x13"/>
+      <node id="ttcrx19_1_bit_error_counter" address="0x14"/>
+      <node id="ttcrx20_1_bit_error_counter" address="0x15"/>
+      <node id="ttcrx21_1_bit_error_counter" address="0x16"/>
+      <node id="ttcrx22_1_bit_error_counter" address="0x17"/>
+      <node id="ttcrx23_1_bit_error_counter" address="0x18"/>
+      <node id="ttcrx24_1_bit_error_counter" address="0x19"/>
+      <node id="ttcrx25_1_bit_error_counter" address="0x1a"/>
+      <node id="ttcrx26_1_bit_error_counter" address="0x1b"/>
+      <node id="ttcrx27_1_bit_error_counter" address="0x1c"/>
+      <node id="ttcrx28_1_bit_error_counter" address="0x1d"/>
+      <node id="ttcrx29_1_bit_error_counter" address="0x1e"/>
+      <node id="ttcrx30_1_bit_error_counter" address="0x1f"/>
+      <node id="ttcrx31_1_bit_error_counter" address="0x20"/>
+      <node id="ttcrx32_1_bit_error_counter" address="0x21"/>
+      <node id="ttcrx33_1_bit_error_counter" address="0x22"/>
+      <node id="ttcrx34_1_bit_error_counter" address="0x23"/>
+      <node id="ttcrx35_1_bit_error_counter" address="0x24"/>
+      <node id="ttcrx36_1_bit_error_counter" address="0x25"/>
+      <node id="ttcrx37_1_bit_error_counter" address="0x26"/>
+      <node id="ttcrx38_1_bit_error_counter" address="0x27"/>
+      <node id="ttcrx39_1_bit_error_counter" address="0x28"/>
+      <node id="ttcrx40_1_bit_error_counter" address="0x29"/>
+      <node id="ttcrx41_1_bit_error_counter" address="0x2a"/>
+      <node id="ttcrx42_1_bit_error_counter" address="0x2b"/>
+      <node id="ttcrx43_1_bit_error_counter" address="0x2c"/>
+      <node id="ttcrx44_1_bit_error_counter" address="0x2d"/>
+      <node id="ttcrx45_1_bit_error_counter" address="0x2e"/>
+      <node id="ttcrx46_1_bit_error_counter" address="0x2f"/>
+      <node id="ttcrx47_1_bit_error_counter" address="0x30"/>
+      <node id="ttcrx48_1_bit_error_counter" address="0x31"/>
+      <node id="l1a1_eye" address="0x32"/>
+      <node id="l1a2_eye" address="0x33"/>
+      <node id="l1a3_eye" address="0x34"/>
+      <node id="l1a4_eye" address="0x35"/>
+      <node id="l1a5_eye" address="0x36"/>
+      <node id="l1a6_eye" address="0x37"/>
+      <node id="l1a7_eye" address="0x38"/>
+      <node id="l1a8_eye" address="0x39"/>
+      <node id="l1a9_eye" address="0x3a"/>
+      <node id="l1a10_eye" address="0x3b"/>
+      <node id="l1a11_eye" address="0x3c"/>
+      <node id="l1a12_eye" address="0x3d"/>
+      <node id="l1a13_eye" address="0x3e"/>
+      <node id="l1a14_eye" address="0x3f"/>
+      <node id="l1a15_eye" address="0x40"/>
+      <node id="l1a16_eye" address="0x41"/>
+      <node id="l1a17_eye" address="0x42"/>
+      <node id="l1a18_eye" address="0x43"/>
+      <node id="l1a19_eye" address="0x44"/>
+      <node id="l1a20_eye" address="0x45"/>
+      <node id="l1a21_eye" address="0x46"/>
+      <node id="l1a22_eye" address="0x47"/>
+      <node id="l1a23_eye" address="0x48"/>
+      <node id="l1a24_eye" address="0x49"/>
+      <node id="l1a25_eye" address="0x4a"/>
+      <node id="l1a26_eye" address="0x4b"/>
+      <node id="l1a27_eye" address="0x4c"/>
+      <node id="l1a28_eye" address="0x4d"/>
+      <node id="l1a29_eye" address="0x4e"/>
+      <node id="l1a30_eye" address="0x4f"/>
+      <node id="l1a31_eye" address="0x50"/>
+      <node id="l1a32_eye" address="0x51"/>
+      <node id="l1a33_eye" address="0x52"/>
+      <node id="l1a34_eye" address="0x53"/>
+      <node id="l1a35_eye" address="0x54"/>
+      <node id="l1a36_eye" address="0x55"/>
+      <node id="l1a37_eye" address="0x56"/>
+      <node id="l1a38_eye" address="0x57"/>
+      <node id="l1a39_eye" address="0x58"/>
+      <node id="l1a40_eye" address="0x59"/>
+      <node id="l1a41_eye" address="0x5a"/>
+      <node id="l1a42_eye" address="0x5b"/>
+      <node id="l1a43_eye" address="0x5c"/>
+      <node id="l1a44_eye" address="0x5d"/>
+      <node id="l1a45_eye" address="0x5e"/>
+      <node id="l1a46_eye" address="0x5f"/>
+      <node id="l1a47_eye" address="0x60"/>
+      <node id="l1a48_eye" address="0x61"/>
+      <node id="ttcrx1_comm_error_counter" address="0x62"/>
+      <node id="ttcrx2_comm_error_counter" address="0x63"/>
+      <node id="ttcrx3_comm_error_counter" address="0x64"/>
+      <node id="ttcrx4_comm_error_counter" address="0x65"/>
+      <node id="ttcrx5_comm_error_counter" address="0x66"/>
+      <node id="ttcrx6_comm_error_counter" address="0x67"/>
+      <node id="ttcrx7_comm_error_counter" address="0x68"/>
+      <node id="ttcrx8_comm_error_counter" address="0x69"/>
+      <node id="ttcrx9_comm_error_counter" address="0x6a"/>
+      <node id="ttcrx10_comm_error_counter" address="0x6b"/>
+      <node id="ttcrx11_comm_error_counter" address="0x6c"/>
+      <node id="ttcrx12_comm_error_counter" address="0x6d"/>
+      <node id="ttcrx13_comm_error_counter" address="0x6e"/>
+      <node id="ttcrx14_comm_error_counter" address="0x6f"/>
+      <node id="ttcrx15_comm_error_counter" address="0x70"/>
+      <node id="ttcrx16_comm_error_counter" address="0x71"/>
+      <node id="ttcrx17_comm_error_counter" address="0x72"/>
+      <node id="ttcrx18_comm_error_counter" address="0x73"/>
+      <node id="ttcrx19_comm_error_counter" address="0x74"/>
+      <node id="ttcrx20_comm_error_counter" address="0x75"/>
+      <node id="ttcrx21_comm_error_counter" address="0x76"/>
+      <node id="ttcrx22_comm_error_counter" address="0x77"/>
+      <node id="ttcrx23_comm_error_counter" address="0x78"/>
+      <node id="ttcrx24_comm_error_counter" address="0x79"/>
+      <node id="ttcrx25_comm_error_counter" address="0x7a"/>
+      <node id="ttcrx26_comm_error_counter" address="0x7b"/>
+      <node id="ttcrx27_comm_error_counter" address="0x7c"/>
+      <node id="ttcrx28_comm_error_counter" address="0x7d"/>
+      <node id="ttcrx29_comm_error_counter" address="0x7e"/>
+      <node id="ttcrx30_comm_error_counter" address="0x7f"/>
+      <node id="ttcrx31_comm_error_counter" address="0x80"/>
+      <node id="ttcrx32_comm_error_counter" address="0x81"/>
+      <node id="ttcrx33_comm_error_counter" address="0x82"/>
+      <node id="ttcrx34_comm_error_counter" address="0x83"/>
+      <node id="ttcrx35_comm_error_counter" address="0x84"/>
+      <node id="ttcrx36_comm_error_counter" address="0x85"/>
+      <node id="ttcrx37_comm_error_counter" address="0x86"/>
+      <node id="ttcrx38_comm_error_counter" address="0x87"/>
+      <node id="ttcrx39_comm_error_counter" address="0x88"/>
+      <node id="ttcrx40_comm_error_counter" address="0x89"/>
+      <node id="ttcrx41_comm_error_counter" address="0x8a"/>
+      <node id="ttcrx42_comm_error_counter" address="0x8b"/>
+      <node id="ttcrx43_comm_error_counter" address="0x8c"/>
+      <node id="ttcrx44_comm_error_counter" address="0x8d"/>
+      <node id="ttcrx45_comm_error_counter" address="0x8e"/>
+      <node id="ttcrx46_comm_error_counter" address="0x8f"/>
+      <node id="ttcrx47_comm_error_counter" address="0x90"/>
+      <node id="ttcrx48_comm_error_counter" address="0x91"/>
+      <node id="ttcrx_ready1" address="0x92"/>
+      <node id="ttcrx_ready2" address="0x93"/>
+      <node id="ttcrx_aligned1" address="0x94"/>
+      <node id="ttcrx_aligned2" address="0x95"/>
+      <node id="status" address="0x96">
+         <node id="pll_locked" mask="0x00000001" description="System clock mcmm locked" />
+         <node id="ttc_tx_ready" mask="0x00000002" description="TTC TX ready" />
+         <node id="chb_grant1" mask="0x00000004" description="CHB grant 1" />
+      </node>
+      <node id="ttcrx1_eye" address="0x97"/>
+      <node id="ttcrx2_eye" address="0x98"/>
+      <node id="ttcrx3_eye" address="0x99"/>
+      <node id="ttcrx4_eye" address="0x9a"/>
+      <node id="ttcrx5_eye" address="0x9b"/>
+      <node id="ttcrx6_eye" address="0x9c"/>
+      <node id="ttcrx7_eye" address="0x9d"/>
+      <node id="ttcrx8_eye" address="0x9e"/>
+      <node id="ttcrx9_eye" address="0x9f"/>
+      <node id="ttcrx10_eye" address="0xa0"/>
+      <node id="ttcrx11_eye" address="0xa1"/>
+      <node id="ttcrx12_eye" address="0xa2"/>
+      <node id="ttcrx13_eye" address="0xa3"/>
+      <node id="ttcrx14_eye" address="0xa4"/>
+      <node id="ttcrx15_eye" address="0xa5"/>
+      <node id="ttcrx16_eye" address="0xa6"/>
+      <node id="ttcrx17_eye" address="0xa7"/>
+      <node id="ttcrx18_eye" address="0xa8"/>
+      <node id="ttcrx19_eye" address="0xa9"/>
+      <node id="ttcrx20_eye" address="0xaa"/>
+      <node id="ttcrx21_eye" address="0xab"/>
+      <node id="ttcrx22_eye" address="0xac"/>
+      <node id="ttcrx23_eye" address="0xad"/>
+      <node id="ttcrx24_eye" address="0xae"/>
+      <node id="ttcrx25_eye" address="0xaf"/>
+      <node id="ttcrx26_eye" address="0xb0"/>
+      <node id="ttcrx27_eye" address="0xb1"/>
+      <node id="ttcrx28_eye" address="0xb2"/>
+      <node id="ttcrx29_eye" address="0xb3"/>
+      <node id="ttcrx30_eye" address="0xb4"/>
+      <node id="ttcrx31_eye" address="0xb5"/>
+      <node id="ttcrx32_eye" address="0xb6"/>
+      <node id="ttcrx33_eye" address="0xb7"/>
+      <node id="ttcrx34_eye" address="0xb8"/>
+      <node id="ttcrx35_eye" address="0xb9"/>
+      <node id="ttcrx36_eye" address="0xba"/>
+      <node id="ttcrx37_eye" address="0xbb"/>
+      <node id="ttcrx38_eye" address="0xbc"/>
+      <node id="ttcrx39_eye" address="0xbd"/>
+      <node id="ttcrx40_eye" address="0xbe"/>
+      <node id="ttcrx41_eye" address="0xbf"/>
+      <node id="ttcrx42_eye" address="0xc0"/>
+      <node id="ttcrx43_eye" address="0xc1"/>
+      <node id="ttcrx44_eye" address="0xc2"/>
+      <node id="ttcrx45_eye" address="0xc3"/>
+      <node id="ttcrx46_eye" address="0xc4"/>
+      <node id="ttcrx47_eye" address="0xc5"/>
+      <node id="ttcrx48_eye" address="0xc6"/>
+      <node id="tap_err_count" address="0xc7"/>
+   </node>
+   <node id="err_inject" address="0x208" description="error injection ctrl/stat" tags="slave3"/>
+   <node id="pkt_ctr" address="0x20a" description="read-write register" tags="slave4"/>
+</node>

@@ -1,0 +1,30 @@
+1<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+	<connection id="GCU_6049" uri="chtcp-2.0://localhost:10203?target=10.7.27.161:50001" address_table="file://gcu1f3.xml" />
+	<connection id="GCU_4019" uri="chtcp-2.0://localhost:10203?target=10.7.15.179:50001" address_table="file://gcu1f3.xml" />
+	<connection id="GCU_1781" uri="chtcp-2.0://localhost:10203?target=10.7.6.245:50001" address_table="file://gcu1f3.xml" />
+	<connection id="GCU_3194" uri="chtcp-2.0://localhost:10203?target=10.7.12.122:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_1358" uri="chtcp-2.0://localhost:10203?target=10.7.5.78:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_5048" uri="chtcp-2.0://localhost:10203?target=10.7.19.184:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_7650" uri="chtcp-2.0://localhost:10203?target=10.7.29.226:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4065" uri="chtcp-2.0://localhost:10203?target=10.7.15.225:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_2586" uri="chtcp-2.0://localhost:10203?target=10.7.10.26:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_5618" uri="chtcp-2.0://localhost:10203?target=10.7.21.242:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4861" uri="chtcp-2.0://localhost:10203?target=10.7.18.253:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_6582" uri="chtcp-2.0://localhost:10203?target=10.7.25.182:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_3978" uri="chtcp-2.0://localhost:10203?target=10.7.15.138:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_0071" uri="chtcp-2.0://localhost:10203?target=10.7.0.71:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_0069" uri="chtcp-2.0://localhost:10203?target=10.7.0.69:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_5060" uri="chtcp-2.0://localhost:10203?target=10.7.19.196:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4076" uri="chtcp-2.0://localhost:10203?target=10.7.15.236:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_5810" uri="chtcp-2.0://localhost:10203?target=10.7.22.178:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4663" uri="chtcp-2.0://localhost:10203?target=10.7.18.55:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4591" uri="chtcp-2.0://localhost:10203?target=10.7.17.239:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_3476" uri="chtcp-2.0://localhost:10203?target=10.7.13.148:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_5388" uri="chtcp-2.0://localhost:10203?target=10.7.21.12:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4091" uri="chtcp-2.0://localhost:10203?target=10.7.15.251:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_4130" uri="chtcp-2.0://localhost:10203?target=10.7.16.34:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_3335" uri="chtcp-2.0://localhost:10203?target=10.7.13.7:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_5291" uri="chtcp-2.0://localhost:10203?target=10.7.20.171:50001" address_table="file://gcu1f3.xml" />
+        <connection id="GCU_7150" uri="chtcp-2.0://localhost:10203?target=10.7.27.238:50001" address_table="file://gcu1f3.xml" />
+</connections>
